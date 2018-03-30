@@ -1,51 +1,45 @@
 
 
 (defun phf-edit-text-faceattrs (size)
-  (cond ( (eq size 1)
-          (message "phf-edit-text 1")
-          '(:family "Minion Pro" :height 180)
-          )
-        ( (eq size 2)
-          (message "phf-edit-text 2")
-          '(:family "Minion Pro" :height 220)
-          )
-        ( (eq size 3)
-          (message "phf-edit-text 3")
-          '(:family "Minion Pro" :height 240)
-          )
-        ( (eq size 4)
-          (message "phf-edit-text 4")
-          '(:family "Minion Pro" :height 260)
-          )
-        ( (eq size 5)
-          (message "phf-edit-text 5")
-          '(:family "Minion Pro" :height 300)
-          )
-        ( t
-          (error "Bad size for phf-edit-text") )
-        )
+  (if (eq window-system 'ns)
+      ;; Mac OS X
+      (list ':family '"Minion Pro"
+        ':height (nth (- size 1) '(
+                                   180 ; size == 1
+                                   220 ; size == 2
+                                   240 ; size == 3
+                                   260 ; size == 4
+                                   300 ; size == 5
+                                   )))
+    ;; Other systems -- use Crimson instead
+    (list ':family '"Crimson"
+      ':height (nth (- size 1) '(
+                                 180 ; size == 1
+                                 220 ; size == 2
+                                 240 ; size == 3
+                                 260 ; size == 4
+                                 300 ; size == 5
+                                 ))))
   )
 
 (defun phf-edit-text-vfcw (size)
-  (cond ( (eq size 1)
-          90
-          )
-        ( (eq size 2)
-          100
-          )
-        ( (eq size 3)
-          115
-          )
-        ( (eq size 4)
-          125
-          )
-        ( (eq size 5)
-          140
-          )
-        ( t
-          (error "Bad size for phf-edit-text")
-          )
-        )
+  (if (eq window-system 'ns)
+      ;; Mac OS X
+      (nth (- size 1) '(
+                        90 ; size == 1
+                        100 ; size == 2
+                        115 ; size == 3
+                        125 ; size == 4
+                        140 ; size == 5
+                        ))
+    ;; Other systems
+    (nth (- size 1) '(
+                      90 ; size == 1
+                      110 ; size == 2
+                      130 ; size == 3
+                      150 ; size == 4
+                      180 ; size == 5
+                      ))
   )
 
 

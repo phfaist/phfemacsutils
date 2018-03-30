@@ -27,7 +27,7 @@
 ;;
 ;; flyspell: use context menu on mac (mouse-3)
 ;;
-(if (eq window-system "ns")
+(if (eq window-system 'ns)
     (eval-after-load "flyspell"
       '(progn
          (define-key flyspell-mouse-map [down-mouse-3] #'flyspell-correct-word)
