@@ -23,6 +23,18 @@
 
 
 
+;; add MathJax to markdown-preview-mode
+(require 'markdown-preview-mode)
+(setq markdown-preview-stylesheets
+      (list "https://www.its.caltech.edu/~phfaist/phf-markdown-preview-mode-style.css"))
+(setq markdown-preview-javascript
+      (list "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"
+            "https://www.its.caltech.edu/~phfaist/phf-markdown-preview-mode-hacks.js"))
+
+
+
+
+
 
 ;;
 ;; flyspell: use context menu on mac (mouse-3)

@@ -71,3 +71,21 @@
       )
     ) ; if
   ) ; defun
+
+
+
+
+;; PhF -- in case you prefer another font to edit in
+(defun phf-font-merriweather (arg)
+  (interactive "P")
+  (if (eq (prefix-numeric-value arg) 1)
+      (progn
+        (buffer-face-mode -1)
+        (setq buffer-face-mode-face '(:family "Merriweather" :height 170))
+        (buffer-face-mode)
+        (setq line-spacing 0.5))
+    (progn
+        (buffer-face-mode -1)
+        (setq line-spacing nil)
+      ))
+  )
