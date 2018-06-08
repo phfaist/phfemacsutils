@@ -29,4 +29,23 @@
         }
     });
 
+
+    var setHyphenate = function(val) {
+        $("#markdown-body").toggleClass("hyphenate-on", val);
+        $("#hyphens-button").toggleClass("hyphenate-on", val);
+    };
+    var toggleHyphenate = function() {
+        var newval = $("#markdown-body").is(".hyphenate-on") ? false : true;
+        setHyphenate(newval);
+    };
+    
+    // switch to turn hyphenation on/off
+    $(document).ready(function() {
+        $("body").append($('<div id="hyphens-button">-</div>'));
+        console.log("Added hyphens button.")
+        $("#hyphens-button").click(toggleHyphenate);
+
+        setHyphenate(true);
+    });
+
 })();
