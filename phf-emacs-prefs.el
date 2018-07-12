@@ -46,3 +46,22 @@
          (define-key flyspell-mouse-map [mouse-3] #'undefined)))
   nil
   )
+
+
+
+
+;;
+;; AUCTeX settings
+;;
+
+;;
+;; Settings to use when editing LaTeX files
+;;
+(add-hook 'LaTeX-mode-hook '(lambda ()
+                              (interactive)
+                              (turn-on-reftex)
+                              (flyspell-mode t)
+                              (if (< (buffer-size) 10000) (flyspell-buffer) ())
+                              (phf-edit-text 2)
+                              ))
+
