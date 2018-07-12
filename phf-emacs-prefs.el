@@ -61,7 +61,7 @@
                               (interactive)
                               (turn-on-reftex)
                               (flyspell-mode t)
-                              (if (< (buffer-size) 10000) (flyspell-buffer) ())
+                              (if (< (buffer-size) 50000) (flyspell-buffer) ())
                               (phf-edit-text 2)
                               ))
 
