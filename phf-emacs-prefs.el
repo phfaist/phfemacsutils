@@ -26,10 +26,10 @@
 ;; add MathJax to markdown-preview-mode
 (require 'markdown-preview-mode)
 (setq markdown-preview-stylesheets
-      (list "https://www.its.caltech.edu/~phfaist/phf-markdown-preview-mode-style.css"))
+      (list "https://cdn.rawgit.com/phfaist/phfemacsutils/master/phf-markdown-preview-mode-style.css"))
 (setq markdown-preview-javascript
       (list "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"
-            "https://www.its.caltech.edu/~phfaist/phf-markdown-preview-mode-hacks.js"))
+            "https://cdn.rawgit.com/phfaist/phfemacsutils/master/phf-markdown-preview-mode-hacks.js"))
 
 
 
@@ -46,3 +46,22 @@
          (define-key flyspell-mouse-map [mouse-3] #'undefined)))
   nil
   )
+
+
+
+
+;;
+;; AUCTeX settings
+;;
+
+;;
+;; Settings to use when editing LaTeX files
+;;
+(add-hook 'LaTeX-mode-hook '(lambda ()
+                              (interactive)
+                              (turn-on-reftex)
+                              (flyspell-mode t)
+                              (if (< (buffer-size) 50000) (flyspell-buffer) ())
+                              (phf-edit-text 2)
+                              ))
+
