@@ -24,7 +24,7 @@
  '(confirm-kill-emacs (quote y-or-n-p))
  '(custom-enabled-themes nil)
  '(delete-active-region nil)
- '(electric-indent-mode nil)
+ '(electric-indent-mode -1)
  '(fill-column 80)
  '(font-latex-script-display (quote (nil)))
  '(font-use-system-font t)

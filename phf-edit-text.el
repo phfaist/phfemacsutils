@@ -100,7 +100,7 @@
     (progn
         (buffer-face-mode -1)
         (setq buffer-face-mode-face
-              (list ':family '"Merriweather" ':height (phf-edit-text-fontsize size)))
+              (list ':family '"Merriweather" ':height (- (phf-edit-text-fontsize size) 20)))
         (setq visual-fill-column-width (phf-edit-text-vfcw size))
         (buffer-face-mode)
         (setq line-spacing 0.5))
