@@ -10,31 +10,31 @@
        (setq buffer-face-mode-face
              (list ':family '"Merriweather"
                    ':height (if (eq window-system 'ns) 180 160) ))
-       (setq visual-fill-column-width 120)
+       (setq visual-fill-column-width (if (eq window-system 'ns) 90 120))
        (setq line-spacing 0.5))
      (progn ; preset=2: simple edit text with Minion Pro or such font
        (setq buffer-face-mode-face
              (list ':family (if (eq window-system 'ns) '"Minion Pro" '"Source Serif Pro")
-                   ':height (if (eq window-system 'ns) '180 '160) ))
-       (setq visual-fill-column-width 110)
+                   ':height (if (eq window-system 'ns) '200 '160) ))
+       (setq visual-fill-column-width (if (eq window-system 'ns) 90 110))
        (setq line-spacing 0.15))
      (progn ; preset=3: simple edit text with IBM Plex Sans
        (setq buffer-face-mode-face
              (list ':family '"IBM Plex Sans"
                    ':height (if (eq window-system 'ns) '180 '160) ))
-       (setq visual-fill-column-width 110)
+       (setq visual-fill-column-width (if (eq window-system 'ns) 90 110))
        (setq line-spacing 0.15))
      (progn ; preset=4: simple edit text with IBM Plex Serif
        (setq buffer-face-mode-face
              (list ':family '"IBM Plex Serif"
                    ':height (if (eq window-system 'ns) '180 '160) ))
-       (setq visual-fill-column-width 110)
+       (setq visual-fill-column-width (if (eq window-system 'ns) 90 110))
        (setq line-spacing 0.15))
      (progn ; preset=5: simple edit text with TeX Gyre Heros
        (setq buffer-face-mode-face
              (list ':family '"TeX Gyre Heros"
                    ':height (if (eq window-system 'ns) '180 '160) ))
-       (setq visual-fill-column-width 110)
+       (setq visual-fill-column-width (if (eq window-system 'ns) 90 110))
        (setq line-spacing nil))
      ))))
 
