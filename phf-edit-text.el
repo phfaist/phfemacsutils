@@ -40,7 +40,7 @@
 
 ;; PhF: shortcuts for text editing.
 (defun phf-edit-text (arg)
-  (interactive "P") ; accept a prefix argument for "size"
+  (interactive "P") ; accept a prefix argument for preset number
   (setq preset (if arg
                  (prefix-numeric-value arg) ; get prefix value
                1)  ; defaults to preset=1 if no prefix
