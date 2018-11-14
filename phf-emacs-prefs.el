@@ -68,9 +68,13 @@
 ;;
 (add-hook 'LaTeX-mode-hook '(lambda ()
                               (interactive)
-                              (turn-on-reftex)
-                              (flyspell-mode t)
-                              (if (< (buffer-size) 50000) (flyspell-buffer) ())
-                              (phf-edit-text 2)
+                              (if (string-equal (file-name-extension (buffer-file-name)) "tex")
+                                  (progn
+                                    (turn-on-reftex)
+                                    (flyspell-mode t)
+                                    (if (< (buffer-size) 50000) (flyspell-buffer) ())
+                                    (text-scale-adjust 2)
+                                    (phf-edit-text 3)
+                                    ))
                               ))
 
