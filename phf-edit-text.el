@@ -43,7 +43,7 @@
   (interactive "P") ; accept a prefix argument for "size"
   (setq preset (if arg
                  (prefix-numeric-value arg) ; get prefix value
-               1)  ; defaults to preset=1 if no prefix
+               2)  ; default preset if no prefix
         )
   (if (eq preset 0)
       (progn ; disable text mode

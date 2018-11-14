@@ -34,6 +34,15 @@
 
 
 
+(if (eq window-system 'ns)
+    (when (display-graphic-p)
+      ;; dark mode on Mac OS X
+;      (add-to-list 'default-frame-alist '(ns-appearance . dark))
+      ))
+
+
+
+
 
 
 ;;
