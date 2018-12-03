@@ -73,7 +73,7 @@
                                     (turn-on-reftex)
                                     (flyspell-mode t)
                                     (if (< (buffer-size) 50000) (flyspell-buffer) ())
-                                    (text-scale-adjust 2)
+                                    (text-scale-adjust 0)
                                     (phf-edit-text 3)
                                     ))
                               ))

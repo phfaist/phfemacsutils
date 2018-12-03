@@ -36,6 +36,16 @@
                    ':height (if (eq window-system 'ns) '180 '160) ))
        (setq visual-fill-column-width (if (eq window-system 'ns) 90 110))
        (setq line-spacing nil))
+     (progn ; preset=6: unset
+       )
+     (progn ; preset=7: unset
+       )
+     (progn ; preset=8: unset
+       )
+     (progn ; preset=9: simple edit text with default fixed font
+       (setq buffer-face-mode-face nil)
+       (setq visual-fill-column-width (if (eq window-system 'ns) 90 120))
+       (setq line-spacing nil))
      ))))
 
 ;; PhF: shortcuts for text editing.
@@ -57,7 +67,8 @@
       (visual-fill-column-mode -1) ; so we can set visual-fill-column-width
       (phf-edit-text-load-preset-settings preset)
       ; enable buffer mode, visual line and fill-column mode
-      (buffer-face-mode)
+      (if buffer-face-mode-face
+          (buffer-face-mode))
       (visual-fill-column-mode 1)
       (visual-line-mode 1)
       (electric-indent-mode -1) ; never enable electric-indent-mode. Why does it get auto-enabled all the time?!?

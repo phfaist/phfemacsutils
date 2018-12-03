@@ -21,7 +21,8 @@ p, li, ol, ul {
     margin-bottom: 1em;
 }
 
-#markdown-body.hyphenate-on p, li {
+#markdown-body.hyphenate-on p,
+#markdown-body.hyphenate-on li {
     hyphens: auto;
     text-align: justify;
 }
