@@ -43,7 +43,7 @@
     };
 
     var setDarkMode = function(val) {
-        $("body").toggleClass("darkmode-on", val);
+        $("body").toggleClass("darkmode", val);
         $("#darkmode-button").toggleClass("button-on", val);
     };
     var toggleDarkMode = function() {

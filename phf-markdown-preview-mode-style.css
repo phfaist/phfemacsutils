@@ -35,12 +35,12 @@ p, li, ol, ul {
 
 .md-button {
     font-size: 8pt;
-    font-weigth: bold;
+    font-weight: 600;
     color: #6f6f6f;
     border-style: solid;
     border-width: 1px;
     cursor: pointer;
-    padding: 2px 6px;
+    padding: 0px 6px;
 }
 .md-button {
     background-color: #c0a0a0;
@@ -52,13 +52,15 @@ p, li, ol, ul {
 }
 #hyphens-button.md-button {
     position: absolute;
+    width: 35px;
     left: 20px;
     top: 20px;
 }
 #darkmode-button.md-button {
     position: absolute;
+    width: 35px;
     left: 20px;
-    top: 45px;
+    top: 55px;
 }
 
 
