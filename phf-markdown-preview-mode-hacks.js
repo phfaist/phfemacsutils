@@ -47,6 +47,8 @@
         $("#darkmode-button").toggleClass("button-on", val);
     };
     var toggleDarkMode = function() {
+        var newval = $("body").is(".darkmode") ? false : true;
+        setDarkMode(newval);
     };
     
     // switch to turn hyphenation on/off
