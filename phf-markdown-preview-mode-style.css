@@ -19,7 +19,7 @@ body {
 }
 body.darkmode {
     background-color: #272727;
-    color: #fefefe;
+    color: #e7e7e7;
 }
 
 p, li, ol, ul {
@@ -88,13 +88,13 @@ a, a:visited {
 }
 body.darkmode a,
 body.darkmode a.visited {
-    color: #6080ff;
+    color: #a0c0ff;
 }
 a:hover {
     color: #0000d7;
 }
 body.darkmode a:hover {
-    color: #60b7ff;
+    color: #70a0ff;
 }
 
 
