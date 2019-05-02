@@ -35,18 +35,28 @@
 
     var setHyphenate = function(val) {
         $("#markdown-body").toggleClass("hyphenate-on", val);
-        $("#hyphens-button").toggleClass("hyphenate-on", val);
+        $("#hyphens-button").toggleClass("button-on", val);
     };
     var toggleHyphenate = function() {
         var newval = $("#markdown-body").is(".hyphenate-on") ? false : true;
         setHyphenate(newval);
     };
+
+    var setDarkMode = function(val) {
+        $("body").toggleClass("darkmode-on", val);
+        $("#darkmode-button").toggleClass("button-on", val);
+    };
+    var toggleDarkMode = function() {
+    };
     
     // switch to turn hyphenation on/off
     $(document).ready(function() {
-        $("body").append($('<div id="hyphens-button">-</div>'));
+        $("body").append($('<div id="hyphens-button" class="md-button">hyph.</div>'));
         console.log("Added hyphens button.")
         $("#hyphens-button").click(toggleHyphenate);
+        $("body").append($('<div id="darkmode-button" class="md-button">dark</div>'));
+        console.log("Added dark-mode button.")
+        $("#darkmode-button").click(toggleDarkMode);
 
         setHyphenate(true);
     });

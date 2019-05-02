@@ -26,10 +26,10 @@
 ;; add MathJax to markdown-preview-mode
 (require 'markdown-preview-mode)
 (setq markdown-preview-stylesheets
-      (list "https://cdn.rawgit.com/phfaist/phfemacsutils/fa9f1e7d2eb9a373632d72c993e4466a4db0a20c/phf-markdown-preview-mode-style.css"))
+      (list "https://phfaist.github.io/phfemacsutils/phf-markdown-preview-mode-style.css"))
 (setq markdown-preview-javascript
       (list "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"
-            "https://cdn.rawgit.com/phfaist/phfemacsutils/fa9f1e7d2eb9a373632d72c993e4466a4db0a20c/phf-markdown-preview-mode-hacks.js"))
+            "https://phfaist.github.io/phfemacsutils/phf-markdown-preview-mode-hacks.js"))
 
 
 

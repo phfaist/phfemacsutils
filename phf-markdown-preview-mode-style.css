@@ -11,9 +11,15 @@ body {
     width: 650px;
     margin: auto;
 
+    hyphens: manual;
+}
+body {
     background-color: #ffffff;
     color: #272727;
-    hyphens: manual;
+}
+body.darkmode {
+    background-color: #272727;
+    color: #fefefe;
 }
 
 p, li, ol, ul {
@@ -27,22 +33,26 @@ p, li, ol, ul {
     text-align: justify;
 }
 
-#hyphens-button {
+.md-button {
     font-size: 10pt;
-    color: #a0a0a0;
-    border: #a0a0a0 solid 1px;
+    font-weigth: bold;
+    color: #6f6f6f;
+    border-style: solid;
+    border-width: 1px;
+}
+#hyphens-button.md-button {
     position: absolute;
     left: 20px;
     top: 20px;
     cursor: pointer;
     padding: 2px 6px;
 }
-#hyphens-button {
-    color: #c0a0a0;
+.md-button {
+    background-color: #c0a0a0;
     border-color: #c0a0a0;
 }
-#hyphens-button.hyphenate-on {
-    color: #a0c0a0;
+.md-button.button-on {
+    background-color: #a0c0a0;
     border-color: #a0c0a0;
 }
 
@@ -69,9 +79,17 @@ a, a:visited {
     color: #0000a0;
     text-decoration: none;
 }
+body.darkmode a,
+body.darkmode a.visited {
+    color: #6080ff;
+}
 a:hover {
     color: #0000d7;
 }
+body.darkmode a:hover {
+    color: #60b7ff;
+}
+
 
 
 body {
@@ -100,25 +118,34 @@ dt {
 hr {
     border: solid 0.5px #a0a0a0;
 }
+body.darkmode hr {
+    border-color: #7f7f7f;
+}
 
 
 
 /* Copied from solarized-light css theme --
-   http://thomasf.github.io/solarized-css/solarized-light.css */
+   http://thomasf.github.io/solarized-css/solarized-light.css
+
+   PhF -- and adapted */
 
 abbr[title] {
-  border-bottom: 1px dotted;
+    border-bottom: 1px dotted;
 }
 b,
 strong {
-  font-weight: bold;
+    font-weight: bold;
 }
 dfn {
-  font-style: italic;
+    font-style: italic;
 }
 mark {
-  background: #ff0;
-  color: #000;
+    background: #ff0;
+    color: #000;
+}
+body.darkmode mark {
+    background: #990;
+    color: #fff;
 }
 code,
 kbd,
