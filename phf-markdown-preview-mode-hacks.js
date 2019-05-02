@@ -6,6 +6,9 @@
     // Store a reference to the original remove method.
     var origHtml = jQuery.fn.html;
 
+    // disable frustrating auto-scroll. Disable all animations, for that matter.
+    jQuery.fn.animate = function() { };
+
     // Override jQuery.html()
     jQuery.fn.html = function()
     {
