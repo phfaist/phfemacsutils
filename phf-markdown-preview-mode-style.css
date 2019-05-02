@@ -34,16 +34,11 @@ p, li, ol, ul {
 }
 
 .md-button {
-    font-size: 10pt;
+    font-size: 8pt;
     font-weigth: bold;
     color: #6f6f6f;
     border-style: solid;
     border-width: 1px;
-}
-#hyphens-button.md-button {
-    position: absolute;
-    left: 20px;
-    top: 20px;
     cursor: pointer;
     padding: 2px 6px;
 }
@@ -54,6 +49,16 @@ p, li, ol, ul {
 .md-button.button-on {
     background-color: #a0c0a0;
     border-color: #a0c0a0;
+}
+#hyphens-button.md-button {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+#darkmode-button.md-button {
+    position: absolute;
+    left: 20px;
+    top: 45px;
 }
 
 
