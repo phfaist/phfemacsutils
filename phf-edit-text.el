@@ -1,6 +1,4 @@
 
-
-
 (defun phf-edit-text-load-preset-settings (preset)
   (message '"loading phf-edit-text preset %d" preset)
   (eval (nth
@@ -9,6 +7,9 @@
      (progn ; preset=1: simple edit text with Merriweather font
        (setq buffer-face-mode-face
              (list ':family '"Merriweather"
+                   ':weight 'semi-light
+                   ':slant 'normal
+                   ':width 'normal
                    ':height (if (eq window-system 'ns) 180 160) ))
        (setq visual-fill-column-width (if (eq window-system 'ns) 90 120))
        (setq line-spacing 0.5))
@@ -56,7 +57,7 @@
                2)  ; default preset if no prefix
         )
   (if (eq preset 0)
-      (progn ; disable text mode
+      (progn ; disable phf text mode
         (visual-line-mode -1)
         (visual-fill-column-mode -1)
         (buffer-face-mode -1)

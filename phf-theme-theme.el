@@ -109,10 +109,12 @@
  '(mode-line
    ((((class color) (background dark))
      (:background "#656565" :foreground "#f6f3e8"
-                  :box (:line-width -1 :color nil :style released-button)))
+                  :box (:line-width -1 :color nil :style released-button)
+                  :family "IBM Plex Sans"))
     (((class color))
      (:foreground "black" :background "grey75"
-                  :box (:line-width -1 :color nil :style released-button)))
+                  :box (:line-width -1 :color nil :style released-button)
+                  :family "IBM Plex Sans"))
     (t (:inverse-video t)) ))
  '(mode-line-inactive
    ( (default (:inherit mode-line))

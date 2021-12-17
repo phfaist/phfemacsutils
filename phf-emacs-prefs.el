@@ -7,6 +7,13 @@
 (global-set-key '[(ctrl down)] (lambda() (interactive) (next-line 6)))
 
 
+;;
+;; Disable Meta-H to keep Mac behavior as "hide application"
+;;
+(global-set-key '[(meta h)]   'ns-do-hide-emacs)
+
+
+
 ;; Mouse Scrolling
 ;; scroll one line at a time (less "jumpy" than defaults)
 (setq mouse-wheel-scroll-amount '(6 ((shift) . 1))) ;; one line at a time
@@ -20,6 +27,8 @@
 ;; see https://emacs.stackexchange.com/a/7294
 (define-key 'iso-transl-ctl-x-8-map (kbd "* [") [?‹])
 (define-key 'iso-transl-ctl-x-8-map (kbd "* ]") [?›])
+
+
 
 
 
@@ -78,3 +87,31 @@
                                     ))
                               ))
 
+
+
+;;
+;; atomic-chrome plug-in to edit text in Firefox or Chrome
+;;
+;; Disable Ctrl-C because when editing LaTeX on overleaf, it's too easy to hit
+;; Ctrl-C by mistake and disconnect! (In AucTeX, Ctrl-C is used to compile the
+;; document.)
+;;
+
+(with-eval-after-load "atomic-chrome"
+  (define-key atomic-chrome-edit-mode-map (kbd "C-c C-c") 'nil)
+  )
+
+;; (defvar 
+;;   (let ((map (make-sparse-keymap)))
+;;     (define-key map (kbd "C-c C-s") 'atomic-chrome-send-buffer-text)
+;;     (define-key map (kbd "C-c C-c") 'atomic-chrome-close-current-buffer)
+;;     map)
+;;   "Keymap for minor mode `atomic-chrome-edit-mode'.")
+
+
+;; (defun my-atomic-chrome-config ()
+;;   "For use in `atomic-chrome-edit-mode-hook' disable C-c C-c binding."
+;;   (local-set-key (kbd "C-c C-c") 'nil)
+;;   )
+;; (add-hook 'atomic-chrome-edit-mode-hook
+;;           'my-atomic-chrome-config)
