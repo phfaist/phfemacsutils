@@ -29,7 +29,13 @@
 (define-key 'iso-transl-ctl-x-8-map (kbd "* ]") [?›])
 
 
+;; fix for Emacs 28 -- https://github.com/d12frosted/homebrew-emacs-plus/issues/383
+(when (eq system-type 'darwin)
+  (setq insert-directory-program "/opt/homebrew/bin/gls"))
 
+
+
+(load "phf-llm-polymode")
 
 
 ;; add MathJax to markdown-preview-mode
@@ -101,7 +107,7 @@
   (define-key atomic-chrome-edit-mode-map (kbd "C-c C-c") 'nil)
   )
 
-;; (defvar 
+;; (defvar
 ;;   (let ((map (make-sparse-keymap)))
 ;;     (define-key map (kbd "C-c C-s") 'atomic-chrome-send-buffer-text)
 ;;     (define-key map (kbd "C-c C-c") 'atomic-chrome-close-current-buffer)
