@@ -35,7 +35,7 @@
 
 
 
-(load "phf-llm-polymode")
+(load "phf-flm-polymode")
 
 
 ;; add MathJax to markdown-preview-mode
